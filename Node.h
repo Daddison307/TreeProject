@@ -32,15 +32,14 @@ public:
 	string LHASH;
 	vector<string> RHISTH;
 	vector<string> LHISTH;
+	Node * parent_
 	Node * leftchild_;
 	Node * rightchild_;
 
 public:
-	// Constructors
-
-	// post: this Node contains entry and NULL pointers
-	explicit Node(string rawevent);
-
+	// Constructor: this Node contains entry and NULL pointers
+	explicit Node(string rawevent, string parentID);
+	
 	// Destructor
 
 	~Node();
