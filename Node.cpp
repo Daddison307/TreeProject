@@ -6,18 +6,12 @@
 #include "Node.h"
 
 
-Node::Node(double entry)
-	: entry_(entry), next_(NULL)
+Node::Node(string rawevent, string parentID)
 {
-	cout << "Node( " << entry_ << ", " << next_ <<
-		" ) created at " << this << endl;
-}
-
-Node::Node(double entry, Node * next)
-	: entry_(entry), next_(next)
-{
-	cout << "Node( " << entry_ << ", " << next_ <<
-		" ) created at " << this << endl;
+	RAWE = rawevent;
+	PARENT = parentID;
+	ID = hash(RAWE, parentID);
+	// will totally need to fix this up
 }
 
 Node::~Node()
